@@ -1,4 +1,4 @@
-/*** GLOBAL ***/
+/*** Global ***/
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +13,8 @@ a:link {
     text-decoration: none;
 }
 
-header a:hover, footer a:hover {
-    font-weight: bold;
+article a:link {
+    text-decoration: underline;
 }
 
 ul {
@@ -27,21 +27,16 @@ img {
     padding-bottom: 10px;
 }
 
-@media only screen and (max-width: 400px) {
-    img {
-        width: 100%
-    }
-}
-
 input {
     all: unset;
-    border: 1px solid black;
+    border: 1px solid;
     text-align: center;
     margin-bottom: 10px;
 }
 
 button {
     all: unset;
+    border: 1px solid;
     text-align: center;
     padding: 5px 10px;
 }
@@ -56,6 +51,15 @@ body {
     line-height: 1.5;
     width: 640px;
     margin: auto;
+}
+
+.title, .subtitle {
+    padding-bottom: 10px;
+}
+
+.caption {
+    text-align: right;
+    font-size: 0.9rem;
 }
 
 /*** Header ***/
@@ -108,15 +112,6 @@ main article .introduction {
     padding-bottom: 20px;
 }
 
-main .title, main .subtitle {
-    padding-bottom: 10px;
-}
-
-main .caption {
-    text-align: right;
-    font-size: 0.9rem;
-}
-
 /*** Footer ***/
 footer {
     padding: 20px;
@@ -167,6 +162,7 @@ footer li, footer h4 {
     }
 }
 
+/* Colours */
 @media (prefers-color-scheme: dark) {
 
     body {
@@ -174,11 +170,11 @@ footer li, footer h4 {
     }
 
     body, a, p, h1, h2, h3, h4, h5, h6 {
-        color: #eee;
+        color: white;
     }
 
-    main a:hover {
-        background-color: #282828;
+    a:hover, button:hover {
+        background-color: black;
     }
 }
 
@@ -188,19 +184,18 @@ footer li, footer h4 {
         color: #000;
     }
 
-    main a:hover {
+    a:hover, button:hover {
         background-color: #d3d3d3;
     }
 }
 
-/*** Theme: common parts ***/
 main {
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 
 main .preview {
-    border: 1px solid #000;
+    border: 1px solid;
 }
 
 input {
@@ -208,27 +203,10 @@ input {
     color: black;
 }
 
-button {
-    color: #eee;
-    background-color: #c10000;
-}
-
-button:hover {
-    background-color: #a00;
-}
-
-article a {
-    font-weight: bold;
-    color: #c10000;
-}
-
-article a:hover, header .logo a:hover {
-    color: #a00;
-}
-
+/* Print */
 @media print {
 
-    header .info {
+    header .info, footer {
         display: none; 
     }
 
