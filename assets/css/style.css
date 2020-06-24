@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    width: 640px;
+    margin: auto;
+}
+
 a:focus {
     outline: none; /* Avoid dotted outline in Firefox after clicking links */
 }
@@ -19,6 +27,10 @@ article a:link {
 
 ul {
     list-style-type: none;
+}
+
+ol {
+    list-style-position: inside;
 }
 
 img {
@@ -43,14 +55,6 @@ button {
 
 button::-moz-focus-inner {
     border: none;   /* Avoid dotted outline in Firefox while clicking buttons */
-}
-
-body {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 14pt;
-    line-height: 1.5;
-    width: 640px;
-    margin: auto;
 }
 
 .title, .subtitle {
